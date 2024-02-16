@@ -78,7 +78,31 @@ fun GreetingImage(message:String,from:String,modifier: Modifier=Modifier){
     }
 }
 
+@Composable
+fun ArticuloCompose(){
+    val image= painterResource(id =R.drawable.bg_compose_background )
+    Column {
+        Image(painter = image, contentDescription = null)
+        Text(text ="Jetpack Compose tutorial",
+            fontSize = 24.sp
+            ,modifier = Modifier
+            .padding(16.dp))
+        Text(text ="Jetpack Compose is a modern toolkit for building native Android UI. Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.",
+                textAlign = TextAlign.Justify,
+                modifier = Modifier.padding(top = 16.dp, bottom = 16.dp)
+        )
+        Text(text = "In this tutorial, you build a simple UI component with declarative functions. You call Compose functions to say what elements you want and the Compose compiler does the rest. Compose is built around Composable functions. These functions let you define your app\\'s UI programmatically because they let you describe how it should look and provide data dependencies, rather than focus on the process of the UI\\'s construction, such as initializing an element and then attaching it to a parent. To create a Composable function, you add the @Composable annotation to the function name.",
+            textAlign = TextAlign.Justify,
+            modifier = Modifier.padding(16.dp))
+    }
+}
 
+
+
+
+
+
+//GreetingImage(message = "Happy Birthday Kara!", from ="From David" )
 @Preview(showBackground = true)
 @Composable
 fun BirthdayCardPreview() {
